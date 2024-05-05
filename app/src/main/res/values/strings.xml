@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TheGrandTodoList</string>
+    <string name="task_input">Task Input</string>
 </resources>
