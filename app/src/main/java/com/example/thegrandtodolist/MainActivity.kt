@@ -1,21 +1,14 @@
 package com.example.thegrandtodolist
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.ArrayAdapter
-import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.thegrandtodolist.ui.theme.TheGrandTodoListTheme
 import com.google.android.material.floatingactionbutton.FloatingActionButton
