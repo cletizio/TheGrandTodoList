@@ -36,6 +36,7 @@ class MainActivity : ComponentActivity() {
         val editTextTodo: EditText = findViewById(R.id.inputTask)
         val buttonAddTodo: FloatingActionButton = findViewById(R.id.addTaskButton)
 
+        // Add new items to the list when the add button is clicked.
         buttonAddTodo.setOnClickListener{
             val todoText = editTextTodo.text.toString().trim()
             if(todoText.isNotEmpty()) {
@@ -47,6 +48,13 @@ class MainActivity : ComponentActivity() {
                 Toast.makeText(this, "Please enter a task you would like to complete.",
                     Toast.LENGTH_SHORT).show()
             }
+        }
+
+        listView.setOnItemClickListener { parent, view, position, id ->
+            val clickedTodo = todoList[position]
+            // Toggle the completion status of the clicked todo item
+            clickedTodo.isCompleted = !clickedTodo.isCompleted
+            adapter.notifyDataSetChanged()
         }
 
         listView.setOnItemLongClickListener { parent, view, position, id ->
