@@ -29,7 +29,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
+            android:id="@+id/addTaskButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="TODO"
@@ -41,7 +41,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/listView"
+        android:id="@+id/vertLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -50,10 +50,13 @@
         tools:layout_editor_absoluteX="8dp"></LinearLayout>
 
     <ListView
-        android:layout_width="395dp"
-        android:layout_height="648dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp" />
+        android:id="@+id/todoListText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/TaskInputView"/>
 
     <View
         android:id="@+id/divider"
@@ -61,8 +64,10 @@
         android:layout_height="1dp"
         android:backgroundTint="@color/black"
         android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/TaskInputView"
-        app:layout_constraintTop_toBottomOf="@+id/listView"
+        app:layout_constraintTop_toBottomOf="@+id/vertLayout"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="657dp" />
 

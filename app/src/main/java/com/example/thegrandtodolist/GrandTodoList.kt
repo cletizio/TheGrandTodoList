@@ -3,5 +3,6 @@ package com.example.thegrandtodolist
 import androidx.annotation.StringRes
 
 data class GrandTodoList(
-    @StringRes val todoId: Int
+    val todoId: Int,
+    val todoText: String
 )
