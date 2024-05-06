@@ -47,28 +47,14 @@
         android:layout_marginBottom="16dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/TaskInputView"
-        tools:layout_editor_absoluteX="8dp"></LinearLayout>
+        tools:layout_editor_absoluteX="8dp">
 
-    <ListView
-        android:id="@+id/todoListText"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/TaskInputView"/>
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="395dp"
-        android:layout_height="1dp"
-        android:backgroundTint="@color/black"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/TaskInputView"
-        app:layout_constraintTop_toBottomOf="@+id/vertLayout"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="657dp" />
+        <ListView
+            android:id="@+id/todoListText"
+            android:layout_width="395dp"
+            android:layout_height="643dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

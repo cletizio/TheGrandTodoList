@@ -48,6 +48,16 @@ class MainActivity : ComponentActivity() {
                     Toast.LENGTH_SHORT).show()
             }
         }
+
+        listView.setOnItemLongClickListener { parent, view, position, id ->
+            val removedTodo = todoList.removeAt(position)
+            adapter.notifyDataSetChanged()
+            Toast.makeText(
+                this, "Deleted: ${removedTodo.todoText}",
+                Toast.LENGTH_SHORT
+            ).show()
+            true // Return true to consume the long click event
+        }
     }
 }
 
